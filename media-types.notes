@@ -1,0 +1,28 @@
+# Collection + JSON
+// Designed specifically to deal with groups or collections of resources
+// Can also represent single items as a set of one
+// In use and some helper libraries and examples
+
+# Hypertext Application Language (HAL)
+// Separates the payload into two parts - data and _links
+// Can also represent single items as a set of one
+// Growing use and some helper libraries and examples
+
+Drawbacks:
+    // Can be verbose
+    // Having metadata in _links separate from data is odd -> easy to lose context and not explore as appropriate
+
+# The Ion Hypermedia Type
+// Designed specifically to key data
+// Metadata logically grouped and easier to process and apply
+// Little use and few helper libraries and examples
+// New but has a lot of potential
+
+# Other Media Types:
+// Siren
+// JSON-LD
+// JSONAPI
+// Mason
+// UBER
+// OData
+// Atom

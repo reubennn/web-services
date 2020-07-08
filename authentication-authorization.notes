@@ -1,0 +1,26 @@
+# API Keys
+Benefits:
+    // Framework and programming language agnostic
+    // Easy to add as a header or even to the URL
+Drawbacks:
+    // URLs are not convenient by logged everywhere (not a secret)
+    // Not easy to update/rotate if compromised
+
+# Create Your Own AuthN/AuthZ Protocol
+// DO NOT DO IT
+Benefits:
+    // NONE
+Drawbacks:
+    // Untested, unproven, supported by you
+    // Everyone needs training on it
+    // No supporting tools, ecosystem, or libraries
+
+# OAuth 2.0
+Benefits:
+    // Reliable and well established
+    // Massive ecosystem
+    // Open-source and commercial options
+Drawbacks:
+    // Complicated and not easy to implement the first time
+
+// see more: Web Security: OAuth and Open ID Content

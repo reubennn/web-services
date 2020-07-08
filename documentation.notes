@@ -1,0 +1,33 @@
+* // ---------- Things to Consider ---------- // *
+# Don't use PDF
+    // Which verison is the latest?
+    // Client may not have the most up to date version
+
+# Reconsider CMS (like WordPress)
+    // Does not show end user's page history and/or versioning info
+
+* // ---------- Documentation Goals ---------- // *
+// Code snippet friendly
+// Needs page history, specifically user facing
+// Needs something that is easy to update
+// Searchable - if it cannot be found, it doesn't exist
+
+* // ---------- Approaches ---------- // *
+
+Wikis:
+// Drawback: It's either updated or not, there is not workflow or staging space in most systems
+// examples:
+    # MediaWiki
+    # Confluence
+
+Static site generators:
+// Drawback: Working in raw text or markup, which may be a challenge for the team
+# Jekyll
+
+Presenters favourite:
+# Slate
+// Based on Jekyll, so all the benefits
+// Five minutes to configure and deploy
+// Preconfigured with various code sampels in mind
+// Language-specific samples are directly linkable
+// Consistent look and feel and navigation throughout the site
