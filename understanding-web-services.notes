@@ -1,0 +1,92 @@
+* // ---------- Overview ---------- // *
+// Sharing data through web services: Windows, Linux, Mainframe, Desktop, Devices
+Client/Server Interaction:
+// Client sends message to server and waits for response
+// Server receives message
+// Web service then performs an action
+// Message is sent back to client from server
+
+// Will transfer data with common language (e.g. XML)
+
+Types of Web Services:
+# SOAP (Simple Object Access Protocol)
+    // Sends messages using XML
+    // XML document is sent with data
+
+# RESTful (Representational State Transfer)
+    // Uses HTTP to access resources
+
+* // ---------- Advantages ---------- // *
+# 1. Reusability
+    // Small reusable component used by multiple systems
+    // Allows organisations to use web services provided by third parties
+
+# 2. Language Transparency
+    // Service provider can write in one language (e.g. PHP, Node.js)
+    // Service client can be written in a totally different language (Python, Ruby, Perl)
+    // Still can communicate because they use a common language (XML, JSON)
+
+# 3. Usability
+    // Easy way to make data more accessible to other systems in a secure way
+    // Wide range of audiences and platforms
+
+# 4. Deployability
+    // Deployed over standard internet technologies
+    // Easily available at a global level
+
+* // ---------- Considerations ---------- // *
+# Latency
+// The time it takes a request to return a response
+// High latency refers to any delay that happens in communication over a network (High latency = BAD)
+// Latency increases when the client and server are running on different machines
+// Important to consider so that websites and applications have fast response times and good performance
+
+# Partial Failure
+// When a server or network fails to respond
+// Typically happens when a network is down or the server is overloaded with requests and cannot respond
+// Clients waiting for a response may crash and do not allow the server to return a response
+// The more services used in a single application, the bigger the risk of a partial failure
+
+* // ---------- Web Service Security ---------- // *
+# 1. Authentication
+// Validates identity of a client
+
+# 2. Authorisation
+// Determines level of client's access
+
+# Basic Authentication (Basic Auth)
+// The simplest protocol available for performing web service authentication over the HTTP protocol
+// Only requires username and password
+
+// 401 Status code returned when a user is not authorised to call a web service
+
+# API Key Authentication
+// Requires the API to be accessed with a unique key
+
+See other LinkedIn Learning content on web security:
+// Programming Foundation: Web Security
+// Web Security: OAuth and OpenID Connect
+
+* // ---------- Web Services & APIs ---------- // *
+// Both facilitate information sharing
+// All web services are APIs, but not all APIs are web services
+
+# Web services
+// Dependent on SOAP protocol which is not a lightweight architecture
+// Requires more work to pack and unpack data
+// Has a lot of overhead
+// An alternative to web services is a library
+
+# APIs
+// REST based
+// Communication and data sharing mechanism between two different applications or systems
+// Natural evolution of web services
+// More dynamic
+
+# Microservices
+// Fully contained individual components that communicate with each other and calling clients
+
+What to use depends on:
+// The business problem that is to be solved
+// The type of application that is to be bought
+// The capabilities of the calling clients

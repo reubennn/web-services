@@ -1,0 +1,23 @@
+* // ---------- HATEOAS ---------- // *
+// Hypermedia
+// As
+// The
+// Engine
+// Of
+// Application
+// State
+
+Advantages:
+// Avoid sending fields that require the client to interpret them and then decide what actions can be taken next
+    // Instead, the server determines this ahead of time and conveys what the client 
+    // can do by the presence or absence of the links provided
+// Client interacts with a REST API entirely through the responses provided dynamically by the server
+
+# Things to consider:
+// All REST APIs must incorporate the HATEOAS principle to be considered genuine
+// RESTful APIs should provide enough information to the client to interact with the server
+// This is different to SOAP-based services where a client and a server interact through a fixed contract
+
+Core Principle:
+// Resources should be discoverable through the publication of links that point to the available resources
+// The responses themselves should tell you what you can do and how you can do it
