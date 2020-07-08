@@ -1,0 +1,19 @@
+* // ---------- Versioning ---------- // *
+Resource URL or Accept Header?:
+// Debatable
+
+# Using the Accept Header
+// Is the "proper" way
+Content Negotiation:
+    // Establishes the markup/notation (usually XML or JSON)
+    // Can establish the media type (structure of the markup)
+    // Can establish the version of the media type (and resource)
+
+curl -I https://api.github.com
+-H "Accept: application/vnd.github.v3+json"
+
+# Using the URL
+// Clear, explicit and easier
+// Nothing is lost when you copy and paste
+
+curl -X POST 'https://api.twilio.com/2010-04-01/Accounts/ACxxxx/SMS/Messages.xml'
