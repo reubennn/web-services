@@ -1,0 +1,99 @@
+// A REST HTTP request must contain a method (verb) and a URI.
+
+* // ---------- HTTP Methods ---------- // *
+# HTTP Methods (also known as verbs)
+// GET
+// POST
+// PUT
+// PATCH
+// DELETE
+// OPTIONS
+// HEAD
+
+GET:
+# Get the specified resource, if available.
+    // SUCCESS => 200 OK
+    // FAILURE => 404 Not Found
+
+POST:
+# Create a new resource and add it to a collection.
+    // SUCCESS => 201 Created
+    // FAILURE =>
+        // 401 Unauthorized
+        // 409 Conflict - Resource already exists
+        // 404 Not Found
+PUT:
+# Update an existing singleton resource based on ID.
+    // SUCCESS => 200 OK
+    // FAILURE =>
+        // 401 Unauthorized
+        // 404 Not Found
+        // 405 Method Not Allowed
+PATCH:
+# Modify an existing singleton resource based on ID.
+    // SUCCESS => 200 OK
+    // FAILURE =>
+        // 401 Unauthorized
+        // 404 Not Found
+        // 405 Method Not Allowed
+
+DELETE:
+# Delete singleton resource based on ID
+    // SUCCESS => 200 OK
+    // FAILURE =>
+        // 401 Unauthorized
+        // 404 Not Found
+        // 405 Method Not Allowed - Cannot delete a resource collection
+
+OPTIONS:
+# Get the options available from this resource
+    // SUCCESS => 200 OK
+
+HEAD:
+# Get just the response headers from the resource
+    // SUCCESS => 200 OK
+    // FAILURE =>
+        // 404 Not Found
+
+* // ---------- HTTP Status Messages ---------- // *
+# 1xx - Information
+    // Not normally seen
+# 2xx - Success
+    // 200 OK
+    // 201 Created
+    // 204 No Content - Server processes request but returned no content
+# 3xx - Redirection
+    // 301 Moved permanently
+    // 302/303 Found at this other URL
+    // 304 Not Modified
+    // 307 Temporary redirect
+    // 308 Resume incomplete
+# 4xx - Client error
+    // 400 Bad request
+    // 401 Unauthorized
+    // 403 Forbidden
+    // 404 Not found
+    // 405 Method not allowed
+    // 409 Conflict
+    // ...
+# 5xx - Server error
+    // 500 Internal server error
+    // 502 Bad gateway
+    // 503 Service unavailable
+
+* // ---------- HTTP Headers ---------- // *
+# Content Negotiation
+// The mechanisms which allow different versions of the same document to exist at a single URL
+ //so the client-server can determine which version best fits their capabilities
+// e.g. Airport terminal, clerk says Hello Bonjour - Asking which language without implicitly asking
+
+# Caching
+// A way of storing and retrieving data so that future requests can retrieve it faster without
+ // performing an operation (calculation, network request, etc.) again
+ETags are a common approach:
+    // 1. Client makes a request
+    // 2. Server responds and creates an ETag based on resource state
+    // 3. Client makes a HEAD request (same request as before)
+    // 4. If data is unchanged, server returns the same ETag -> complete
+    // 5. If the data has changed, server returns a new ETag
+    // 6. If the ETag is changed, Client makes the full request

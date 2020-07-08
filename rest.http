@@ -1,0 +1,6 @@
+# GET https://reqres.in/api/users
+# OPTIONS https://reqres.in/api/users
+# OPTIONS http://restful.dev/wp-json/wp/v2/posts?
+# HEAD http://restful.dev/wp-json/wp/v2/posts
+GET https://pokeapi.co/api/v2/pokemon/pikachu
+# OPTIONS https://jsonplaceholder.typicode.com/posts/1

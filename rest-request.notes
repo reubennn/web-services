@@ -1,0 +1,4 @@
+# Methods
+// GET, POST, PUT, PATCH, DELETE, OPTIONS, HEAD
+# Perform Methods on a the resource URI
+// e.g. https://restful.dev/posts/5
