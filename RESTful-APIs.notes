@@ -1,0 +1,93 @@
+* // ---------- REST ---------- // *
+# API => Application Programming Interface
+// Software intermediary that allows application programs to interact with each other and share data.
+// A set of features and rules that exist inside a software program enabling interaction
+//  between the software and other items, such as other software or hardware.
+
+// Application/Client -> API Requests -> Server/Data Source -> API response -> repeat
+
+# REST => Representational State Transfer
+// Refers to a group of software architecture design constraints that bring about efficient,
+//  reliable, and scalable systems
+// A set of guidelines to design APIs
+// ie. Data architecture and design methodology
+
+# RESTful APIs
+// Runs on the web over HTTP to give access to a web resource
+
+Four principles that APIs follow:
+# 1. Uniform Resource Identifier (URI)
+// "A compact sequence of characteristics that identifies an abstract or physical resource"
+//  that "provides a simple and extensible means for identifying a resource".
+// exampes:
+    // https://restfu.dev/posts/5
+    // ftp://myserver.dev/files/docs/scripts.docx
+    // mailto:morten@example.com
+    // tel:+1-888-555-1212
+    // urn:library:names:authors:mrh
+    // library:names:authors:mrh
+# 2. Operations
+// Resources are manipulated using a fixed set of operations
+    // GET - Retrieves a resource
+    // POST - Creates a resource
+    // PUT - Updates a resource
+    // DELETE - Removes a resource
+# 3. Formats
+// HTML, XML, Plain text
+# 4. Stateless
+// Server will not store any state the client made
+
+// These principles allow RESTful applications to be simple, lightweight and fast
+
+* // ---------- Benefits of REST ---------- // *
+Benefits of RESTful APIs:
+// Easier to create and easier for clients to consume
+// Frequently used for web integration and mobile device applications
+// Promote loose-coupling:
+    // System should be designed so that changes and enhancements don't break clients that are already using them
+    // If API needs to be upgraded to provide new features, everyone using the API can keep using the same code
+        // without having to upgrade their request to match
+// Allow for a greater variety of data formats:
+    // XML, JSON, ...
+
+// RESTfuls start small and evolve over time
+
+Disadvantages of SOAP:
+// SOAP based web services are not as ideal for mobile application communication
+    //  because they send a lot of information back and forth that the client may not care about
+// Only use the XML data format
+
+* // ---------- REST Constraints ---------- // *
+// A REST API should follow the following constraints:
+
+# 1. Client-server Architecture
+// The client manages user interfact concerns, while the server manages data storage concerns.
+# 2. Statelessness
+// No client context or information, aka "state", can be stored on the server between requests.
+// Each and every request should be able to execute on its own.
+Why Stateless?:
+    // Inherent to the design of the internet
+    // Stability, scalability, reliability, flexibility
+# 3. Cacheability
+// All REST responses must be clearly marked as cacheable or not cacheable.
+// Know when it's possible to just reutn results, instead of doing the work.
+# 4. Layered System
+// The client cannot know, and shouldn't care whether it's connected directly to the
+ // server or to an intermediary like a CND (Content Delivery Network) or mirror.
+// Component A might or might not communicate directly with Component B
+# 5. Code on Demand
+// Servers are allowed to transfer executable code like JavaScript and compiled components to clients.
+# 6. Uniform Interfact
+
+    # 6.1 Resource identification in request
+    // The URI request must specify what resource it is looking for and what format the response should use.
+    # 6.2 Resource manipulation through representations
+    // Once a cient has a representation of a resource, it can modify or delete the resource.
+    # 6.3 Self-descriptive messages
+    // For sending and receiving REST data
+    // Each representation must describe it's own data format
+    // If receiving in JSON, the response message will have it's media type set to JSON
+    # 6.4 Hypermedia as the engine of application state (HATEOAS)
+    // Once a client has access to a REST service, it should be able to discover all
+    //  available resources and methods through the hyperlinks provided
+
