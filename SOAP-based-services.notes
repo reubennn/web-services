@@ -1,0 +1,59 @@
+* // ---------- SOAP ---------- // *
+# Used for enterprise-level web services 
+    // Require high security and has complex transactions
+    // Payment gateways
+    // CRM software
+    // Identity management
+    // Telecommunication services
+
+# SOAP
+    // Simple
+    // Object
+    // Access
+    // Protocol
+
+// Carries a lot more overhead
+// Additional security
+// Different kinds of transactions
+// ACID compliance
+
+Four parts to a SOAP message:
+# 1. Envelope
+// * Required
+// Start and ending tags of the message
+# 2. Header
+// * Optional
+// Contains attributes of the message
+// Allows to extend a SOAP message by adding additional information like security tokens
+# 3. Body
+// * Required
+// Actual XML data that the server transmits to the receiver
+# 4. Fault
+// * Optional
+// Information about any errors that might occur during processing the message
+
+// ^ SOAP carries the message in the same order.
+
+# ACID
+    // Atomicity
+    // Consistency
+    // Isolation
+    // Durability
+// ^ Qualities needed when processing complex or important operations
+
+// See Programming Foundations: Databases
+
+* // ---------- WSDL ---------- // *
+// All operations that can be performed by the web service
+// Contains information, like the data types being used in SOAP messages
+//  and operations available via the web service
+
+# WSDL
+    // Web
+    // Service
+    // Description
+    // Language
+
+* // ---------- Testing ---------- // *
+# SoapUI
+// The de-facto standard for testing SOAP-based web services
