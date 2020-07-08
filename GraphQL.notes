@@ -1,0 +1,41 @@
+* // ---------- GraphQL ---------- // *
+// A syntax describing how to ask for data, which is usually used to load data
+// Lots of flexibility than most normal APIs and web services don't
+// Queries cleaner and easier to understand
+// Combining multiple queries into one request
+// Specify requests specifically for what data is needed and get back exactly that
+
+* // ---------- Query Document ---------- // *
+// A string sent to a server to rpcoess and request data
+// Are read-only operations, and cannot be manipulated
+
+// Each query has a specific object that it returns
+
+* // ---------- GraphQL Type System ---------- // *
+# Schema
+// Defines a set of types
+# Queries
+// Obtain information about specific fields from objects
+# Resolvers
+// Resolvers retrieve the data
+
+General pattern of a simple query:
+# Field names
+// Unit of data (can be nested)
+
+# Arguments:
+// Set of key-value pairs (selection set)
+
+# Name
+// Give queries useful names
+//  which is helpful for debugging and server side logging
+
+Other operation types (than query):
+# Mutation
+// Modifies server-side data
+# Subscription
+// Notifies changes in data in real time
+
+Data Format:
+// Most commonly RAW GraphQL Queries
+// Can also use JSON
